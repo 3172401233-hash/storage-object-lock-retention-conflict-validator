@@ -1,0 +1,54 @@
+{
+  "now": "2026-11-23T06:00:00Z",
+  "policies": [
+    {
+      "version": "p-2026-11",
+      "governance_bypass_allowed": true,
+      "compliance_bypass_allowed": false,
+      "legal_hold_bypass_allowed": false
+    }
+  ],
+  "request": {
+    "bypass_header": true,
+    "bypass_authority": true,
+    "policy_version": "p-2026-11"
+  },
+  "versions": [
+    {
+      "version_id": "v-governance",
+      "object_key": "photos/a.jpg",
+      "retention_mode": "GOVERNANCE",
+      "retention_until": "2026-12-25T00:00:00Z",
+      "legal_hold": false,
+      "delete_marker": false,
+      "policy_version": "p-2026-11"
+    },
+    {
+      "version_id": "v-compliance",
+      "object_key": "photos/a.jpg",
+      "retention_mode": "COMPLIANCE",
+      "retention_until": "2026-12-25T00:00:00Z",
+      "legal_hold": false,
+      "delete_marker": false,
+      "policy_version": "p-2026-11"
+    },
+    {
+      "version_id": "v-legal-hold",
+      "object_key": "photos/a.jpg",
+      "retention_mode": "NONE",
+      "retention_until": null,
+      "legal_hold": true,
+      "delete_marker": false,
+      "policy_version": "p-2026-11"
+    },
+    {
+      "version_id": "v-already-marked",
+      "object_key": "photos/b.jpg",
+      "retention_mode": "NONE",
+      "retention_until": null,
+      "legal_hold": false,
+      "delete_marker": true,
+      "policy_version": "p-2026-11"
+    }
+  ]
+}
